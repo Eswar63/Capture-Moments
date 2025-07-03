@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - Capture Moments{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>Our Portfolio</h1>
+        <p>A showcase of our finest work across Andhra Pradesh</p>
+    </div>
+</section>
+
+<section class="portfolio-filters">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="prewedding">Pre-Wedding</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="portrait">Portraits</button>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-gallery">
+    <div class="container">
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="wedding">
+                <img src="https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg" alt="Traditional Telugu Wedding">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Traditional Telugu Wedding</h3>
+                        <p>Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="prewedding">
+                <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg" alt="Couple Portrait Session">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Couple Portrait Session</h3>
+                        <p>Araku Valley</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="wedding">
+                <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg" alt="Wedding Ceremony">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Wedding Ceremony</h3>
+                        <p>Vijayawada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg" alt="Corporate Event">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Corporate Event</h3>
+                        <p>Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="prewedding">
+                <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg" alt="Beach Pre-Wedding">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Beach Pre-Wedding</h3>
+                        <p>Visakhapatnam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg" alt="Family Portrait">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Family Portrait</h3>
+                        <p>Tirupati</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="wedding">
+                <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg" alt="Bridal Portraits">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Bridal Portraits</h3>
+                        <p>Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="https://images.pexels.com/photos/1181712/pexels-photo-1181712.jpeg" alt="Conference Photography">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Conference Photography</h3>
+                        <p>Vijayawada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="prewedding">
+                <img src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg" alt="Romantic Couple Shoot">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Romantic Couple Shoot</h3>
+                        <p>Horsley Hills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Love What You See?</h2>
+            <p>Let's create something beautiful together for your special day</p>
+            <a href="{{ url_for('booking') }}" class="btn btn-primary btn-large">Book Your Session</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

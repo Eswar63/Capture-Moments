@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Capture Moments{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch for bookings, inquiries, or just to say hello</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+91 9876543210</p>
+                    <p>+91 9876543211</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@capturemoments.in</p>
+                    <p>bookings@capturemoments.in</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Plot No. 123, Banjara Hills<br>
+                    Hyderabad, Telangana 500034<br>
+                    Andhra Pradesh, India</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Sunday<br>
+                    9:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form class="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact_name">Name *</label>
+                            <input type="text" id="contact_name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_email">Email *</label>
+                            <input type="email" id="contact_email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact_phone">Phone</label>
+                            <input type="tel" id="contact_phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_subject">Subject</label>
+                            <select id="contact_subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="booking">Booking Request</option>
+                                <option value="portfolio">Portfolio Request</option>
+                                <option value="pricing">Pricing Information</option>
+                                <option value="collaboration">Collaboration</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact_message">Message *</label>
+                        <textarea id="contact_message" name="message" rows="6" required placeholder="Tell us about your photography needs..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="location-map">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Service Areas</h2>
+            <p>We proudly serve these beautiful cities across Andhra Pradesh</p>
+        </div>
+        <div class="service-areas">
+            <div class="area-list">
+                <div class="area-item">
+                    <h4>Hyderabad Metro</h4>
+                    <p>Gachibowli, Banjara Hills, HITEC City, Jubilee Hills, Secunderabad</p>
+                </div>
+                <div class="area-item">
+                    <h4>Visakhapatnam</h4>
+                    <p>Beaches, Araku Valley, Borra Caves, Rushikonda, Yarada</p>
+                </div>
+                <div class="area-item">
+                    <h4>Vijayawada</h4>
+                    <p>Krishna River, Prakasam Barrage, Undavalli Caves, Mangalagiri</p>
+                </div>
+                <div class="area-item">
+                    <h4>Tirupati</h4>
+                    <p>Temple City, Tirumala Hills, Sri Venkateswara Temple, Chandragiri</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

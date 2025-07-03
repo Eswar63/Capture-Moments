@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Capture Moments</h1>
+        <p class="hero-subtitle">Build Memories That Last Forever</p>
+        <p class="hero-description">Professional photography services across Andhra Pradesh, specializing in weddings, portraits, and special events</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('booking') }}" class="btn btn-primary">Book Your Session</a>
+            <a href="{{ url_for('portfolio') }}" class="btn btn-secondary">View Portfolio</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Choose Capture Moments</h2>
+            <p>We bring your special moments to life with our professional photography services</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Passionate Photography</h3>
+                <p>Every shot is crafted with love and attention to detail, ensuring your memories are preserved beautifully</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Andhra Pradesh Coverage</h3>
+                <p>Serving all major cities including Hyderabad, Visakhapatnam, Vijayawada, and Tirupati</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Expert Team</h3>
+                <p>Professional photographers with years of experience in weddings, events, and portrait photography</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Quick Delivery</h3>
+                <p>Fast turnaround time with edited photos delivered within 7-14 days of your event</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-preview">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Photography Services</h2>
+            <p>From intimate gatherings to grand celebrations, we capture it all</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg" alt="Wedding Photography">
+                </div>
+                <div class="service-content">
+                    <h3>Wedding Photography</h3>
+                    <p>Complete wedding coverage including ceremonies, rituals, and celebrations</p>
+                    <span class="service-price">Starting from ₹25,000</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg" alt="Pre-Wedding Shoots">
+                </div>
+                <div class="service-content">
+                    <h3>Pre-Wedding Shoots</h3>
+                    <p>Romantic couple photography sessions at scenic Andhra Pradesh locations</p>
+                    <span class="service-price">Starting from ₹15,000</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg" alt="Corporate Events">
+                </div>
+                <div class="service-content">
+                    <h3>Corporate Events</h3>
+                    <p>Professional event photography for conferences, seminars, and corporate gatherings</p>
+                    <span class="service-price">Starting from ₹20,000</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{{ url_for('services') }}" class="btn btn-primary">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>What Our Clients Say</h2>
+            <p>Hear from couples and families who trusted us with their precious moments</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Capture Moments made our wedding day absolutely magical. The team was professional, and the photos were beyond our expectations!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Priya & Rajesh</h4>
+                        <span>Wedding in Hyderabad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Amazing pre-wedding shoot in Araku Valley. The photographer captured our love story beautifully. Highly recommended!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Sneha & Vikram</h4>
+                        <span>Pre-Wedding in Visakhapatnam</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Professional service for our corporate event. Great attention to detail and excellent final output. Will book again!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Tech Solutions Pvt Ltd</h4>
+                        <span>Corporate Event in Vijayawada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Capture Your Special Moments?</h2>
+            <p>Let's create beautiful memories together. Book your photography session today!</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('booking') }}" class="btn btn-primary btn-large">Book Now</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary btn-large">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

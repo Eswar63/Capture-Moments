@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Capture Moments - Build Memories{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{{ url_for('home') }}">
+                    <i class="fas fa-camera"></i>
+                    <span>Capture Moments</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
+                <li><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
+                <li><a href="{{ url_for('booking') }}" class="nav-link">Book Now</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message flash-{{ category }}">
+                            {{ message }}
+                            <button class="flash-close">&times;</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Capture Moments</h3>
+                <p>Building beautiful memories across Andhra Pradesh</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Wedding Photography</a></li>
+                    <li><a href="#">Pre-Wedding Shoots</a></li>
+                    <li><a href="#">Corporate Events</a></li>
+                    <li><a href="#">Portrait Photography</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="#">Hyderabad</a></li>
+                    <li><a href="#">Visakhapatnam</a></li>
+                    <li><a href="#">Vijayawada</a></li>
+                    <li><a href="#">Tirupati</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                <p><i class="fas fa-envelope"></i> info@capturemoments.in</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Andhra Pradesh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Capture Moments. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

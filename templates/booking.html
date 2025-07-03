@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Book Photography Session - Capture Moments{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>Book Your Photography Session</h1>
+        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+    </div>
+</section>
+
+<section class="booking-form-section">
+    <div class="container">
+        <div class="booking-container">
+            <div class="booking-form">
+                <form method="POST" class="form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event_type">Event Type *</label>
+                            <select id="event_type" name="event_type" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="prewedding">Pre-Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="portrait">Portrait Session</option>
+                                <option value="family">Family Photography</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="event_date">Event Date *</label>
+                            <input type="date" id="event_date" name="event_date" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location in Andhra Pradesh *</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select Location</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="visakhapatnam">Visakhapatnam</option>
+                            <option value="vijayawada">Vijayawada</option>
+                            <option value="tirupati">Tirupati</option>
+                            <option value="guntur">Guntur</option>
+                            <option value="nellore">Nellore</option>
+                            <option value="kakinada">Kakinada</option>
+                            <option value="rajahmundry">Rajahmundry</option>
+                            <option value="other">Other Location</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="package_type">Package Type *</label>
+                            <select id="package_type" name="package_type" required>
+                                <option value="">Select Package</option>
+                                <option value="basic">Basic Package</option>
+                                <option value="standard">Standard Package</option>
+                                <option value="premium">Premium Package</option>
+                                <option value="luxury">Luxury Package</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="photographer">Preferred Photographer</label>
+                            <select id="photographer" name="photographer">
+                                <option value="any">Any Available</option>
+                                <option value="arjun_reddy">Arjun Reddy</option>
+                                <option value="lakshmi_prasad">Lakshmi Prasad</option>
+                                <option value="kiran_kumar">Kiran Kumar</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requirements">Special Requirements or Notes</label>
+                        <textarea id="requirements" name="requirements" rows="4" placeholder="Please describe any specific requirements, style preferences, or special moments you want us to capture..."></textarea>
+                    </div>
+                    
+                    <div class="price-estimate">
+                        <h3>Estimated Cost: <span id="estimated-cost">₹15,000</span></h3>
+                        <p class="price-note">*Final pricing may vary based on specific requirements and additional services</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">Submit Booking Request</button>
+                </form>
+            </div>
+            
+            <div class="booking-info">
+                <div class="info-card">
+                    <h3>What Happens Next?</h3>
+                    <ul class="process-list">
+                        <li>
+                            <i class="fas fa-paper-plane"></i>
+                            <span>You submit the booking form</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>We call you within 24 hours</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar-check"></i>
+                            <span>We confirm date and details</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-handshake"></i>
+                            <span>Contract signing & advance payment</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-camera"></i>
+                            <span>Your photography session!</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Package Includes</h3>
+                    <ul class="package-includes">
+                        <li><i class="fas fa-check"></i> Professional photographer</li>
+                        <li><i class="fas fa-check"></i> High-resolution photos</li>
+                        <li><i class="fas fa-check"></i> Professional editing</li>
+                        <li><i class="fas fa-check"></i> Online gallery</li>
+                        <li><i class="fas fa-check"></i> Quick turnaround</li>
+                        <li><i class="fas fa-check"></i> Customer support</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                        <p><i class="fas fa-envelope"></i> info@capturemoments.in</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Andhra Pradesh</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9 AM - 8 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

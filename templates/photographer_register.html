@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Photographer Registration - Capture Moments{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>Join Our Photography Team</h1>
+        <p>Become part of Andhra Pradesh's premier photography network</p>
+    </div>
+</section>
+
+<section class="registration-section">
+    <div class="container">
+        <div class="registration-container">
+            <div class="registration-form">
+                <h2>Photographer Registration</h2>
+                <form method="POST" class="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reg_name">Full Name *</label>
+                            <input type="text" id="reg_name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_email">Email Address *</label>
+                            <input type="email" id="reg_email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reg_phone">Phone Number *</label>
+                            <input type="tel" id="reg_phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_experience">Experience (Years) *</label>
+                            <select id="reg_experience" name="experience" required>
+                                <option value="">Select Experience</option>
+                                <option value="1-2">1-2 Years</option>
+                                <option value="3-5">3-5 Years</option>
+                                <option value="6-10">6-10 Years</option>
+                                <option value="10+">10+ Years</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg_specialization">Specialization *</label>
+                        <select id="reg_specialization" name="specialization" required>
+                            <option value="">Select Specialization</option>
+                            <option value="wedding">Wedding Photography</option>
+                            <option value="portrait">Portrait Photography</option>
+                            <option value="corporate">Corporate Events</option>
+                            <option value="fashion">Fashion Photography</option>
+                            <option value="landscape">Landscape Photography</option>
+                            <option value="all">All Types</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg_portfolio">Portfolio Website/Social Media</label>
+                        <input type="url" id="reg_portfolio" name="portfolio" placeholder="https://...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg_about">About Yourself</label>
+                        <textarea id="reg_about" name="about" rows="4" placeholder="Tell us about your photography journey, style, and what makes you unique..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">Submit Application</button>
+                </form>
+            </div>
+            
+            <div class="registration-benefits">
+                <h3>Why Join Capture Moments?</h3>
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Steady Client Flow</h4>
+                            <p>Access to our established client base across Andhra Pradesh</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-rupee-sign"></i>
+                        <div>
+                            <h4>Competitive Rates</h4>
+                            <p>Fair revenue sharing model with transparent pricing</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-camera"></i>
+                        <div>
+                            <h4>Equipment Support</h4>
+                            <p>Access to professional equipment when needed</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Skill Development</h4>
+                            <p>Regular workshops and training sessions</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h4>Professional Network</h4>
+                            <p>Connect with other photographers and industry professionals</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h4>Brand Recognition</h4>
+                            <p>Work under a recognized and trusted brand name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
